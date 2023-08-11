@@ -2,10 +2,11 @@ package com.botas.musteriPortali.musteri.service;
 
 import com.botas.musteriPortali.musteri.entity.Istasyon;
 import com.botas.musteriPortali.musteri.repos.IstasyonRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-
+@Service
 public class IstasyonServiceImpl implements IstasyonService {
     private final IstasyonRepository istasyonRepository;
 
