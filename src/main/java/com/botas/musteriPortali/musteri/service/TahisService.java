@@ -10,6 +10,8 @@ public interface TahisService {
     Tahis save(Tahis tahis);
 
     Optional<Tahis> getById(Long id);
+
     void deleteById(Long id);
+
     List<Tahis> getAll();
 }

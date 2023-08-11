@@ -14,7 +14,6 @@ import java.util.Optional;
 public class KullaniciController {
 
     private final KullaniciService kullaniciService;
-    private KullaniciController musteriService;
 
     public KullaniciController(KullaniciService kullaniciService) {
         this.kullaniciService = kullaniciService;
