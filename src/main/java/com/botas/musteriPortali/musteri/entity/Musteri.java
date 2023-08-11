@@ -31,6 +31,9 @@ public class Musteri implements Serializable {
     public  String ilce;
     @Column(length = 15, name = "telefon")
     public  String telefon;
+    @Column(length = 1, name = "aktif")
+    public Boolean aktif;
+
 
 
 
