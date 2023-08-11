@@ -1,7 +1,6 @@
 package com.botas.musteriPortali.musteri.contoller;
 
 import com.botas.musteriPortali.musteri.entity.Fatura;
-import com.botas.musteriPortali.musteri.entity.Musteri;
 import com.botas.musteriPortali.musteri.service.FaturaService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
