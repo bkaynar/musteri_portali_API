@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.math.BigDecimal;
+import java.util.Date;
 
 @Entity
 @Table(name = "gerceklesen_tmb")
@@ -21,6 +22,8 @@ public class GerceklesenTMB {
 
     @Column(name = "miktar")
     private BigDecimal miktar;
+    @Column(name = "tarih")
+    private Date tarih;
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "musteri_id")
     private Musteri musteri;
