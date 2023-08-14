@@ -13,6 +13,8 @@ import lombok.*;
 @EqualsAndHashCode(of = "id")
 public class Istasyon {
     @Id
+    @SequenceGenerator(name = "seq_istasyon", initialValue = 1, allocationSize = 50)
+    @GeneratedValue(generator = "seq_istasyon", strategy = GenerationType.SEQUENCE)
     private Long Id;
 
     @Column(name = "istasyon_adi", length = 50)

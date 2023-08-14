@@ -16,7 +16,10 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @EqualsAndHashCode(of = "id")
 public class Fatura implements Serializable {
+    
     @Id
+    @SequenceGenerator(name = "seq_fatura", initialValue = 1, allocationSize = 50)
+    @GeneratedValue(generator = "seq_fatura", strategy = GenerationType.SEQUENCE)
     private Long Id;
 
     @Column(name = "yil", length = 4)

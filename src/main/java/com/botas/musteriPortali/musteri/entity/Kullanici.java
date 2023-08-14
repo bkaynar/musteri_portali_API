@@ -12,6 +12,8 @@ import lombok.*;
 @EqualsAndHashCode(of = "id")
 public class Kullanici {
     @Id
+    @SequenceGenerator(name = "seq_kullanici", initialValue = 1, allocationSize = 50)
+    @GeneratedValue(generator = "seq_kullanici", strategy = GenerationType.SEQUENCE)
     private Long Id;
     @Column(name = "kullanici_adi", length = 50)
     private String kullanici_adi;
