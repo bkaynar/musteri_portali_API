@@ -21,10 +21,10 @@ public class Musteri implements Serializable {
     private Long id;
     @Column(length = 10, name="musteriKod")
     public String musteriKod;
-    @Column(length = 200, name="musteriAdi")
+    @Column(length = 200, name="musteriAd  i")
     public String musteriAdi;
     @Column(length = 500, name = "adres")
-    public  String adress;
+    public  String adres;
     @Column(length = 50, name = "il")
     public  String il;
     @Column(length = 100, name = "ilce")

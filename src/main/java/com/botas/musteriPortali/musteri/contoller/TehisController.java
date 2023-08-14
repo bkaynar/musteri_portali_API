@@ -18,12 +18,12 @@ public class TehisController {
         this.tehisService = tehisService;
     }
 
-    @PostMapping(value = "/save")
+    @PostMapping(value = "/ekle")
     public ResponseEntity<Tehis> ekle(@RequestBody Tehis tehis) {
         return ResponseEntity.ok(tehisService.save(tehis));
     }
 
-    @GetMapping(value = "/getById{id}")
+    @GetMapping(value = "/getById/{id}")
     public ResponseEntity<Optional<Tehis>> getById(@PathVariable Long id) {
         return ResponseEntity.ok(tehisService.getById(id));
     }

@@ -29,5 +29,5 @@ public class Tehis {
     //Serbets Tuketici ID Foreign Key Gelecek
     @ManyToOne
     @JoinColumn(name = "serbest_tuketici_id")
-    private SerbestTuketici serbestTuketici;//Burası Foreign Key Oluşturuyor
+    private STuketici serbestTuketici;//Burası Foreign Key Oluşturuyor
 }

@@ -16,12 +16,12 @@ public class KullaniciController {
     public KullaniciController(KullaniciService kullaniciService) {
         this.kullaniciService = kullaniciService;
     }
-    @PostMapping(value = "/save")
+    @PostMapping(value = "/ekle")
     public ResponseEntity<Kullanici> ekle (@RequestBody Kullanici kullanici){
         return ResponseEntity.ok(kullaniciService.save(kullanici));
     }
 
-    @GetMapping(value = "/getById{id}")
+    @GetMapping(value = "/getById/{id}")
     public ResponseEntity<Optional<Kullanici>> getById(@PathVariable Long id){
         return ResponseEntity.ok(kullaniciService.getById(id));
     }

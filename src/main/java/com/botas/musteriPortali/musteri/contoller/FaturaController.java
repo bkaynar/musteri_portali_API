@@ -19,12 +19,12 @@ public class FaturaController {
         //@service olduğunu belirtmen gerekiyor
     }
 
-    @PostMapping
+    @PostMapping(value = "/ekle")
     public ResponseEntity<Fatura> ekle(@RequestBody Fatura fatura) {
         return ResponseEntity.ok(faturaService.save(fatura));
     }
 
-    @GetMapping(value = "/getById{id}")
+    @GetMapping(value = "/getById/{id}")
     public ResponseEntity<Optional<Fatura>> getById(@PathVariable Long id) {
         return ResponseEntity.ok(faturaService.getById(id));
     }

@@ -19,12 +19,12 @@ public class TahisController {
         this.tahisService = tahisService;
     }
 
-    @PostMapping(value = "/save")
+    @PostMapping(value = "/ekle")
     public ResponseEntity<Tahis> ekle (@RequestBody Tahis tahis){
         return ResponseEntity.ok(tahisService.save(tahis));
     }
 
-    @GetMapping(value = "/getById{id}")
+    @GetMapping(value = "/getById/{id}")
     public ResponseEntity<Optional<Tahis>> getById(@PathVariable Long id){
         return ResponseEntity.ok(tahisService.getById(id));
     }

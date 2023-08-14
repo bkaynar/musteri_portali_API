@@ -18,12 +18,12 @@ public class MusteriController {
         this.musteriService = musteriService;
     }
 
-    @PostMapping(value = "/save")
+    @PostMapping(value = "/ekle")
     public ResponseEntity< Musteri> ekle (@RequestBody Musteri musteri){
         return ResponseEntity.ok(musteriService.save(musteri));
     }
 
-    @GetMapping(value = "/getById{id}")
+    @GetMapping(value = "/getById/{id}")
     public ResponseEntity<Optional<Musteri>> getById(@PathVariable Long id){
         return ResponseEntity.ok(musteriService.getById(id));
     }

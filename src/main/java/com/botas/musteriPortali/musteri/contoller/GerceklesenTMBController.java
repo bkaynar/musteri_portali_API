@@ -17,12 +17,12 @@ public class GerceklesenTMBController {
     public GerceklesenTMBController(GerceklesenTMBService gerceklesenTMBService) {
         this.gerceklesenTMBService = gerceklesenTMBService;
     }
-    @PostMapping(value = "/save")
+    @PostMapping(value = "/ekle")
     public ResponseEntity<GerceklesenTMB> ekle(@RequestBody GerceklesenTMB gerceklesenTMB) {
         return ResponseEntity.ok(gerceklesenTMBService.save(gerceklesenTMB));
     }
 
-    @GetMapping(value = "/getById{id}")
+    @GetMapping(value = "/getById/{id}")
     public ResponseEntity<Optional<GerceklesenTMB>> getById(@PathVariable Long id) {
         return ResponseEntity.ok(gerceklesenTMBService.getById(id));
     }

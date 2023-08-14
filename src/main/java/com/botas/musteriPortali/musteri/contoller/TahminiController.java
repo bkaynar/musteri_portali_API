@@ -20,12 +20,12 @@ public class TahminiController {
         this.tahminiService = tahminiService;
     }
 
-    @PostMapping(value = "/save")
+    @PostMapping(value = "/ekle")
     public ResponseEntity<Tahmini> ekle(@RequestBody Tahmini tahmini) {
         return ResponseEntity.ok(tahminiService.save(tahmini));
     }
 
-    @GetMapping(value = "/getById{id}")
+    @GetMapping(value = "/getById/{id}")
     public ResponseEntity<Optional<Tahmini>> getById(@PathVariable Long id) {
         return ResponseEntity.ok(tahminiService.getById(id));
     }
