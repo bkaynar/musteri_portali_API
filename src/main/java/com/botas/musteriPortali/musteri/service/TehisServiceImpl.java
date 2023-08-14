@@ -29,7 +29,7 @@ public class TehisServiceImpl implements TehisService {
 
     @Override
     public void deleteById(Long id) {
-        tehisRepository.deleteById(id);
+tehisRepository.deleteById(id);
     }
 
     @Override

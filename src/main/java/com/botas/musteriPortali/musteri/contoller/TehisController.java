@@ -1,6 +1,5 @@
 package com.botas.musteriPortali.musteri.contoller;
 
-import com.botas.musteriPortali.musteri.entity.Tahis;
 import com.botas.musteriPortali.musteri.entity.Tehis;
 import com.botas.musteriPortali.musteri.service.TehisService;
 import org.springframework.http.ResponseEntity;
