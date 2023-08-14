@@ -20,8 +20,34 @@ public class MusteriServiceImpl implements MusteriService {
     @Override
     @Transactional
     public Musteri save(Musteri musteri) {
-       return musteriRepository.save(musteri);
+        return musteriRepository.save(musteri);
 
+    }
+
+    @Override
+    public Musteri update(Musteri musteri) {
+        if (musteri.getId() != null) {
+            var musteriDb = musteriRepository.findById(musteri.getId());
+            if (musteriDb.isPresent()) {
+                Musteri musterEnt = musteriDb.get();
+                if (musteri.getMusteriAdi() != null)
+                    musterEnt.setMusteriAdi(musteri.getMusteriAdi());
+                if (musteri.getAdres() != null)
+                    musterEnt.setAdres(musteri.getAdres());
+                if (musteri.getIlce() != null)
+                    musterEnt.setIlce(musteri.getIlce());
+                if (musteri.getIl() != null)
+                    musterEnt.setIl(musteri.getIl());
+                if (musteri.getTelefon() != null)
+                    musterEnt.setTelefon(musteri.getTelefon());
+                if (musteri.getAktif() != null)
+                    musterEnt.setAktif(musteri.getAktif());
+
+                return musteriRepository.save(musterEnt);
+
+            } else return null;
+        } else
+            return null;
     }
 
     @Override
@@ -31,7 +57,7 @@ public class MusteriServiceImpl implements MusteriService {
 
     @Override
     public void deleteById(Long id) {
-    musteriRepository.deleteById(id);
+        musteriRepository.deleteById(id);
     }
 
     @Override

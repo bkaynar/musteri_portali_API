@@ -23,6 +23,11 @@ public class MusteriController {
         return ResponseEntity.ok(musteriService.save(musteri));
     }
 
+    @PutMapping(value = "/gunle")
+    public ResponseEntity< Musteri> gunle (@RequestBody Musteri musteri){
+        return ResponseEntity.ok(musteriService.update(musteri));
+    }
+
     @GetMapping(value = "/getById/{id}")
     public ResponseEntity<Optional<Musteri>> getById(@PathVariable Long id){
         return ResponseEntity.ok(musteriService.getById(id));

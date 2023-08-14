@@ -21,7 +21,7 @@ public class Musteri implements Serializable {
     private Long id;
     @Column(length = 10, name="musteriKod")
     public String musteriKod;
-    @Column(length = 200, name="musteriAd  i")
+    @Column(length = 200, name="musteriAdi")
     public String musteriAdi;
     @Column(length = 500, name = "adres")
     public  String adres;
@@ -33,8 +33,4 @@ public class Musteri implements Serializable {
     public  String telefon;
     @Column(length = 1, name = "aktif")
     public Boolean aktif;
-
-
-
-
-}
+    }

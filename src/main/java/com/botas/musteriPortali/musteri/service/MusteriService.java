@@ -10,6 +10,8 @@ public interface MusteriService {
 
     Musteri save(Musteri musteri);
 
+    Musteri update(Musteri musteri);
+
     Optional<Musteri> getById(Long id);
     void deleteById(Long id);
     List<Musteri> getAll();
