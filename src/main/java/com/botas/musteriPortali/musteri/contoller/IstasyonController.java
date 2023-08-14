@@ -9,24 +9,27 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("istasyon")
+@RequestMapping("/istasyon")
 public class IstasyonController {
-private final IstasyonService istasyonService;
+    private final IstasyonService istasyonService;
 
 
     public IstasyonController(IstasyonService istasyonService) {
         this.istasyonService = istasyonService;
     }
+
     @PostMapping(value = "/save")
-    public ResponseEntity<Istasyon> ekle(@RequestBody Istasyon istasyon){
+    public ResponseEntity<Istasyon> ekle(@RequestBody Istasyon istasyon) {
         return ResponseEntity.ok(istasyonService.save(istasyon));
     }
+
     @GetMapping(value = "/getById{id}")
-    public ResponseEntity<Optional<Istasyon>> getById(@PathVariable Long id){
+    public ResponseEntity<Optional<Istasyon>> getById(@PathVariable Long id) {
         return ResponseEntity.ok(istasyonService.getById(id));
     }
+
     @GetMapping(value = "istasyonlar")
-    public ResponseEntity<List<Istasyon>> getAll(){
+    public ResponseEntity<List<Istasyon>> getAll() {
         return ResponseEntity.ok(istasyonService.getAll());
     }
 }
