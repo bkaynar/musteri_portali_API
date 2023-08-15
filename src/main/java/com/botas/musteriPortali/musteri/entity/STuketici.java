@@ -16,9 +16,6 @@ public class STuketici {
     @SequenceGenerator(name = "seq_s_tuketici", initialValue = 1, allocationSize = 50)
     @GeneratedValue(generator = "seq_s_tuketici", strategy = GenerationType.SEQUENCE)
     private Long id;
-    @Column(name = "musteri_kodu")
-    public String musteri_kodu;
-
     @Column(name = "st_adi")
     public String st_adi;
 
@@ -27,9 +24,7 @@ public class STuketici {
 
     @Column(name = "hacim")
     public String hacim;
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "musteri_id")
-    private Musteri musteri;
+
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "istasyon_id")
     private Istasyon istasyon;
