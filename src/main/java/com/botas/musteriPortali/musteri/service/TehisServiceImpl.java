@@ -23,6 +23,26 @@ public class TehisServiceImpl implements TehisService {
     }
 
     @Override
+    public Tehis update(Tehis tehis) {
+        if (tehis.getId() != null) {
+            var tehisDb = tehisRepository.findById(tehis.getId());
+            if (tehisDb.isPresent()) {
+                Tehis tahisEnt = tehisDb.get();
+                if (tehis.getBaslangic_tarihi() != null)
+                    tahisEnt.setBaslangic_tarihi(tehis.getBaslangic_tarihi());
+                if (tehis.getBitis_tarihi() != null)
+                    tahisEnt.setBitis_tarihi(tehis.getBitis_tarihi());
+                if (tehis.getSerbestTuketici() != null)
+                    tahisEnt.setSerbestTuketici(tehis.getSerbestTuketici());
+                if (tehis.getImza_tarihi() != null)
+                    tahisEnt.setImza_tarihi(tehis.getImza_tarihi());
+                return tehisRepository.save(tahisEnt);
+
+            } else return null;
+        } else
+            return null;
+    }
+    @Override
     public Optional<Tehis> getById(Long id) {
         return tehisRepository.findById(id);
     }

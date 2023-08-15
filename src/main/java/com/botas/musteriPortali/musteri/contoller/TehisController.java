@@ -1,5 +1,6 @@
 package com.botas.musteriPortali.musteri.contoller;
 
+import com.botas.musteriPortali.musteri.entity.Musteri;
 import com.botas.musteriPortali.musteri.entity.Tehis;
 import com.botas.musteriPortali.musteri.service.TehisService;
 import org.springframework.http.ResponseEntity;
@@ -23,6 +24,10 @@ public class TehisController {
         return ResponseEntity.ok(tehisService.save(tehis));
     }
 
+    @PutMapping(value = "/gunle")
+    public ResponseEntity<Tehis>gunle (@RequestBody Tehis tehis){
+        return ResponseEntity.ok(tehisService.update(tehis));
+    }
     @GetMapping(value = "/getById/{id}")
     public ResponseEntity<Optional<Tehis>> getById(@PathVariable Long id) {
         return ResponseEntity.ok(tehisService.getById(id));
