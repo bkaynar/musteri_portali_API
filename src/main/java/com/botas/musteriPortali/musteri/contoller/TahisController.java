@@ -15,6 +15,11 @@ public class TahisController {
 
     private final TahisService tahisService;
 
+
+    @PutMapping(value = "/gunle")
+    public ResponseEntity<Tahis>gunle (@RequestBody Tahis tahis){
+        return ResponseEntity.ok(tahisService.update(tahis));
+    }
     public TahisController(TahisService tahisService) {
         this.tahisService = tahisService;
     }
