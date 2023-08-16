@@ -25,10 +25,6 @@ public class TahminiController {
         return ResponseEntity.ok(tahminiService.save(tahmini));
     }
 
-    @PutMapping(value = "/gunle")
-    public ResponseEntity<Tahmini> gunle(@RequestBody Tahmini tahmini) {
-        return ResponseEntity.ok(tahminiService.update(tahmini));
-    }
 
     @GetMapping(value = "/getById/{id}")
     public ResponseEntity<Optional<Tahmini>> getById(@PathVariable Long id) {

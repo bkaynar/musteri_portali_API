@@ -21,25 +21,6 @@ public class TahminiServiceImpl implements TahminiService {
     }
 
     @Override
-    public Tahmini update(Tahmini tahmini) {
-        if (tahmini.getId() != null) {
-            var tahminiDb = tahminiRepository.findById(tahmini.getId());
-            if (tahminiDb.isPresent()) {
-                Tahmini tahminiEnt = tahminiDb.get();
-                if (tahmini.getBildirim() != null)
-                    tahminiEnt.setBildirim(tahmini.getBildirim());
-                if (tahmini.getTarih() != null)
-                    tahminiEnt.setTarih(tahmini.getTarih());
-                if (tahmini.getMusteri() != null)
-                    tahminiEnt.setMusteri(tahmini.getMusteri());
-                if (tahmini.getMiktar() != null)
-                    tahminiEnt.setMiktar(tahmini.getMiktar());
-                return tahminiRepository.save(tahminiEnt);
-            } else return null;
-        } else return null;
-    }
-
-    @Override
     public Optional<Tahmini> getById(Long id) {
         return tahminiRepository.findById(id);
     }

@@ -10,7 +10,6 @@ import java.util.Optional;
 public interface TahminiService {
     Tahmini save (Tahmini tahmini);
 
-    Tahmini update(Tahmini tahmini);
 
     Optional<Tahmini> getById(Long id);
 
