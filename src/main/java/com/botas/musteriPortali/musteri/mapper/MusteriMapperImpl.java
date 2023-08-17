@@ -63,7 +63,8 @@ public class MusteriMapperImpl implements MusteriMapper {
             return null;
         }
         List<Musteri> list= new ArrayList<>(musteriModelList.size());
-        for (MusteriModel musteriModel: musteriModelList){
+        for (MusteriModel musteriModel: musteriModelList)//müşteri sayısı kadar döner ve sonucu verir
+        {
             list.add(convertToEntity(musteriModel));
         }
         return list;    }
