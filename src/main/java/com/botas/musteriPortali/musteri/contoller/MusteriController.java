@@ -29,7 +29,7 @@ public class MusteriController {
     }
 
     @GetMapping(value = "/getById/{id}")
-    public ResponseEntity<Optional<Musteri>> getById(@PathVariable Long id){
+    public ResponseEntity<Musteri> getById(@PathVariable Long id){
         return ResponseEntity.ok(musteriService.getById(id));
     }
 

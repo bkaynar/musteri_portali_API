@@ -16,12 +16,13 @@ public class Kullanici {
     @GeneratedValue(generator = "seq_kullanici", strategy = GenerationType.SEQUENCE)
     private Long Id;
     @Column(name = "kullanici_adi", length = 50)
-    private String kullanici_adi;
+    private String kullaniciAdi;
     @Column(name = "kullanici_mail", length = 100)
-    private String kullanici_mail;
+    private String kullaniciMail;
     @Column(name = "kullanici_sifre", length = 100)
-    private String kullanici_sifre;
+    private String kullaniciSifre;
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "musteri_id")
     private Musteri musteri;
+
 }

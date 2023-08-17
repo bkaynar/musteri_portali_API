@@ -16,7 +16,7 @@ public class BildirimController {
 
     private final BildirimService bildirimService;
 
-    public BildirimController(FaturaService faturaService, BildirimService bildirimService) {
+    public BildirimController( BildirimService bildirimService) {
         this.bildirimService = bildirimService;
         //Service olduğunu belirtmen gerekiyor
     }

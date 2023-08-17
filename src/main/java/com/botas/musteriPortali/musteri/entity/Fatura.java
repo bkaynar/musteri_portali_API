@@ -30,6 +30,8 @@ public class Fatura implements Serializable {
 
     @Column(name = "tutar" )
     private BigDecimal tutar;
+    @Column(name = "tuketim_miktari" )
+    private BigDecimal tuketimMiktari;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "musteri_fatura_id")

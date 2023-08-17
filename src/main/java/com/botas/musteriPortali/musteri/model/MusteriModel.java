@@ -10,7 +10,7 @@ public class MusteriModel {
     private Long id;
     public String musteriKod;
     public String musteriAdi;
-    public  String adress;
+    public  String adres;
     public  String il;
     public  String ilce;
     public  String telefon;

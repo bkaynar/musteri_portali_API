@@ -12,7 +12,7 @@ public interface MusteriService {
 
     Musteri update(Musteri musteri);
 
-    Optional<Musteri> getById(Long id);
+    Musteri getById(Long id);
     void deleteById(Long id);
     List<Musteri> getAll();
 

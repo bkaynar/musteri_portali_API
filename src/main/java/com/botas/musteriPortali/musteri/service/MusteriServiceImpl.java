@@ -51,8 +51,8 @@ public class MusteriServiceImpl implements MusteriService {
     }
 
     @Override
-    public Optional<Musteri> getById(Long id) {
-        return musteriRepository.findById(id);
+    public Musteri getById(Long id) {
+        return musteriRepository.getById(id);
     }
 
     @Override
