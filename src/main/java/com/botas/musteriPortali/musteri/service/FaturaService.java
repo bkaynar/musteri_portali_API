@@ -18,7 +18,7 @@ public interface FaturaService {
     List<Fatura> getAll();
 
     List<Fatura> getMusteriFaturalar(Long musteriId);
-    
+
 
     Optional<Fatura> getByay(int ay);
 
