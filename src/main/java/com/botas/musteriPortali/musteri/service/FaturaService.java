@@ -12,7 +12,9 @@ public interface FaturaService {
     Fatura save(Fatura fatura);
 
     Optional<Fatura> getById(Long id);
+
     void deleteById(Long id);
+
     List<Fatura> getAll();
 
     List<Fatura> getMusteriFaturalar(Long musteriId);
