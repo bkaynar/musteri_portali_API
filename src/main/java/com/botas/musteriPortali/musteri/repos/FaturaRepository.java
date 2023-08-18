@@ -11,6 +11,8 @@ import java.util.Optional;
 public interface FaturaRepository extends JpaRepository<Fatura,Long> {
     Optional<Fatura> findByAy(int ay);
 
+    List<Fatura> findByMusteri_Id(Long musteriId);
+
     @Query(value="select b from Fatura b where b.musteri.id=?1 and b.yil=?2 ") // ?1= birinci parametre -- ?2= iknci parameter
     List<Fatura> getMusteriFatura(Long musteriId, int yil);
 }

@@ -15,6 +15,8 @@ public interface FaturaService {
     void deleteById(Long id);
     List<Fatura> getAll();
 
+    List<Fatura> getMusteriFaturalar(Long musteriId);
+
     Optional<Fatura> getByay(int ay);
 
     FaturaBilgiModel getLoginFatura(FaturaBilgiModel faturaBilgiModel);

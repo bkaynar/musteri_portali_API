@@ -43,6 +43,12 @@ public class FaturaServicelmpl implements FaturaService {
     }
 
     @Override
+    public List<Fatura> getMusteriFaturalar(Long musteriId) {
+        return faturaRepository.findByMusteri_Id(musteriId);
+
+    }
+
+    @Override
     public Optional<Fatura> getByay(int ay) {
         return faturaRepository.findByAy(ay);
     }
