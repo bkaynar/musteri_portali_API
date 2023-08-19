@@ -30,4 +30,7 @@ public class Tehis {
     @ManyToOne
     @JoinColumn(name = "serbest_tuketici_id")
     private STuketici serbestTuketici;//Burası Foreign Key Oluşturuyor
+    @ManyToOne
+    @JoinColumn(name = "musteri_id")
+    private Musteri musteri;//Burası Foreign Key Oluşturuyor
 }

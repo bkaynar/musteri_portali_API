@@ -17,6 +17,7 @@ public class GerceklesenTMBController {
     public GerceklesenTMBController(GerceklesenTMBService gerceklesenTMBService) {
         this.gerceklesenTMBService = gerceklesenTMBService;
     }
+
     @PostMapping(value = "/ekle")
     public ResponseEntity<GerceklesenTMB> ekle(@RequestBody GerceklesenTMB gerceklesenTMB) {
         return ResponseEntity.ok(gerceklesenTMBService.save(gerceklesenTMB));
@@ -30,5 +31,10 @@ public class GerceklesenTMBController {
     @GetMapping(value = "gerceklesen_tmb")
     public ResponseEntity<List<GerceklesenTMB>> getAll() {
         return ResponseEntity.ok(gerceklesenTMBService.getAll());
+    }
+
+    @GetMapping(value = "/getByMusteriId/{musteriId}")
+    public ResponseEntity<List<GerceklesenTMB>> getByMusteriId(@PathVariable Long musteriId) {
+        return ResponseEntity.ok(gerceklesenTMBService.getByMusteriId(musteriId));
     }
 }

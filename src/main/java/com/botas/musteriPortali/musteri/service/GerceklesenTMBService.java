@@ -13,4 +13,7 @@ public interface GerceklesenTMBService {
     void deleteById(Long id);
 
     List<GerceklesenTMB> getAll();
+
+    List<GerceklesenTMB> getByMusteriId(Long musteriId);
+
 }

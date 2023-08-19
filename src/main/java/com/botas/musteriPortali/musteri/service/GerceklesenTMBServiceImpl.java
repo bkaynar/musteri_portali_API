@@ -34,4 +34,10 @@ public class GerceklesenTMBServiceImpl implements GerceklesenTMBService {
     public List<GerceklesenTMB> getAll() {
         return gerceklesenTMBRepository.findAll();
     }
+
+    @Override
+    public List<GerceklesenTMB> getByMusteriId(Long musteriId) {
+        return gerceklesenTMBRepository.findByMusteriId(musteriId);
+
+    }
 }
