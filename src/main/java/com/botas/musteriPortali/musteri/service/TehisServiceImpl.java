@@ -56,4 +56,9 @@ tehisRepository.deleteById(id);
     public List<Tehis> getAll() {
         return tehisRepository.findAll();
     }
+
+    @Override
+    public List<Tehis> getByMusteriId(Long musteriId) {
+        return tehisRepository.findByMusteriId(musteriId);
+    }
 }

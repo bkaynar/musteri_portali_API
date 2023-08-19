@@ -16,4 +16,6 @@ public interface TehisService {
     void deleteById(Long id);
 
     List<Tehis> getAll();
+
+    List<Tehis> getByMusteriId(Long musteriId);
 }

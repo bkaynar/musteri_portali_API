@@ -37,4 +37,9 @@ public class TehisController {
     public ResponseEntity<List<Tehis>> getAll() {
         return ResponseEntity.ok(tehisService.getAll());
     }
+
+    @GetMapping(value = "/getByMusteriId/{musteriId}")
+    public ResponseEntity<List<Tehis>> getByMusteriId(@PathVariable Long musteriId) {
+        return ResponseEntity.ok(tehisService.getByMusteriId(musteriId));
+    }
 }
