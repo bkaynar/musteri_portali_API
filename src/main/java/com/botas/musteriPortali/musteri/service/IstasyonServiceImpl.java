@@ -33,4 +33,9 @@ public class IstasyonServiceImpl implements IstasyonService {
     public List<Istasyon> getAll() {
         return istasyonRepository.findAll();
     }
+
+    @Override
+    public List<Istasyon> getByMusteriId(Long musteriId) {
+        return istasyonRepository.findByMusteriId(musteriId);
+    }
 }

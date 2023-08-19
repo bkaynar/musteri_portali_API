@@ -32,4 +32,10 @@ public class IstasyonController {
     public ResponseEntity<List<Istasyon>> getAll() {
         return ResponseEntity.ok(istasyonService.getAll());
     }
+
+    @GetMapping(value = "/getByMusteriId/{musteriId}")
+    public ResponseEntity<List<Istasyon>> getByMusteriId(@PathVariable Long musteriId) {
+        return ResponseEntity.ok(istasyonService.getByMusteriId(musteriId));
+    }
 }
+

@@ -13,4 +13,6 @@ public interface IstasyonService {
     void deleteById(Long id);
 
     List<Istasyon> getAll();
+
+    List<Istasyon> getByMusteriId(Long musteriId);
 }
