@@ -1,6 +1,7 @@
 package com.botas.musteriPortali.musteri.service;
 
 import com.botas.musteriPortali.musteri.entity.STuketici;
+import com.botas.musteriPortali.musteri.entity.Tahmini;
 import com.botas.musteriPortali.musteri.repos.STuketiciRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
@@ -9,10 +10,10 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class STuketiciImpl implements STuketiciService {
+public class STuketiciServiceImpl implements STuketiciService {
     private final STuketiciRepository sTuketiciRepository;
 
-    public STuketiciImpl(STuketiciRepository sTuketiciRepository) {
+    public STuketiciServiceImpl(STuketiciRepository sTuketiciRepository) {
         this.sTuketiciRepository = sTuketiciRepository;
     }
 
@@ -36,4 +37,5 @@ public class STuketiciImpl implements STuketiciService {
     public List<STuketici> getAll() {
         return sTuketiciRepository.findAll();
     }
+
 }

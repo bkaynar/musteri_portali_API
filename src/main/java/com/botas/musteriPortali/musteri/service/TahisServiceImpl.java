@@ -64,4 +64,9 @@ public class TahisServiceImpl implements TahisService {
     public List<Tahis> getAll() {
         return tahisRepository.findAll();
     }
+
+    @Override
+    public List<Tahis> getByMusteriId(Long musteriId) {
+        return tahisRepository.findByMusteriId(musteriId);
+    }
 }

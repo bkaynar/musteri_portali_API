@@ -34,4 +34,9 @@ public class TahminiServiceImpl implements TahminiService {
     public List<Tahmini> getAll() {
         return tahminiRepository.findAll();
     }
+
+    @Override
+    public List<Tahmini> getByMusteriId(Long musteriId) {
+        return tahminiRepository.findByMusteriId(musteriId);
+    }
 }

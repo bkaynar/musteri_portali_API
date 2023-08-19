@@ -1,6 +1,7 @@
 package com.botas.musteriPortali.musteri.contoller;
 
 import com.botas.musteriPortali.musteri.entity.STuketici;
+import com.botas.musteriPortali.musteri.entity.Tahis;
 import com.botas.musteriPortali.musteri.service.STuketiciService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -31,4 +32,6 @@ public class STuketiciController {
     public ResponseEntity<List<STuketici>> getAll() {
         return ResponseEntity.ok(tuketiciService.getAll());
     }
+
 }
+

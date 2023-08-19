@@ -16,4 +16,6 @@ public interface TahminiService {
     void deleteById(Long id);
 
     List<Tahmini> getAll();
+
+    List<Tahmini> getByMusteriId(Long musteriId);
 }

@@ -35,4 +35,9 @@ public class TahminiController {
     public ResponseEntity<List<Tahmini>> getAll() {
         return ResponseEntity.ok(tahminiService.getAll());
     }
+
+    @GetMapping(value = "/getByMusteriId/{musteriId}")
+    public ResponseEntity<List<Tahmini>> getByMusteriId(@PathVariable Long musteriId) {
+        return ResponseEntity.ok(tahminiService.getByMusteriId(musteriId));
+    }
 }

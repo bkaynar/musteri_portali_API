@@ -28,5 +28,8 @@ public class STuketici {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "istasyon_id")
     private Istasyon istasyon;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "istasyon_id")
+    private Musteri musteri;
 
 }
