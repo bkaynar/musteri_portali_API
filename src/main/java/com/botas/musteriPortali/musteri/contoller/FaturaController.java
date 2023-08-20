@@ -35,15 +35,16 @@ public class FaturaController {
     public ResponseEntity<List<Fatura>> getAll() {
         return ResponseEntity.ok(faturaService.getAll());
     }
+
     @GetMapping(value = "/getMusteriFaturalar/{musteriId}")
     public ResponseEntity<List<Fatura>> getMusteriFaturalar(@PathVariable Long musteriId) {
         List<Fatura> faturalar = faturaService.getMusteriFaturalar(musteriId);
         return ResponseEntity.ok(faturalar);
     }
 
-    @PostMapping(value = "/getLoginFatura")
-    public ResponseEntity<FaturaBilgiModel> getLoginFatura(@RequestBody FaturaBilgiModel faturaBilgiModel) {
-        return ResponseEntity.ok(faturaService.getLoginFatura(faturaBilgiModel));
+    @GetMapping(value = "/getLoginFatura/{musteriId}")
+    public ResponseEntity<FaturaBilgiModel> getLoginFatura(@PathVariable Long musteriId) {
+        return ResponseEntity.ok(faturaService.getLoginFatura(musteriId));
     }
 
 

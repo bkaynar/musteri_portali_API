@@ -29,7 +29,7 @@ public class STuketici {
     @JoinColumn(name = "istasyon_id")
     private Istasyon istasyon;
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "istasyon_id")
+    @JoinColumn(name = "musteri_id")
     private Musteri musteri;
 
 }

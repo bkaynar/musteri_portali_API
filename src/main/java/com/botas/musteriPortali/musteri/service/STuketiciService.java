@@ -1,7 +1,6 @@
 package com.botas.musteriPortali.musteri.service;
 
 import com.botas.musteriPortali.musteri.entity.STuketici;
-import com.botas.musteriPortali.musteri.entity.Tahmini;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,5 +12,4 @@ public interface STuketiciService{
     void deleteById(Long id);
 
     List<STuketici> getAll();
-
 }

@@ -37,4 +37,10 @@ public class Fatura implements Serializable {
     @JoinColumn(name = "musteri_fatura_id")
     private Musteri musteri;//Burası Foreign Key Oluşturuyor
 
+    @Column(name = "kdv" )
+    private BigDecimal kdv;
+
+    @Column(name = "otv" )
+    private BigDecimal otv;
+
 }

@@ -2,7 +2,6 @@ package com.botas.musteriPortali.musteri.service;
 
 import com.botas.musteriPortali.musteri.entity.Fatura;
 import com.botas.musteriPortali.musteri.model.FaturaBilgiModel;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
@@ -22,6 +21,6 @@ public interface FaturaService {
 
     Optional<Fatura> getByay(int ay);
 
-    FaturaBilgiModel getLoginFatura(FaturaBilgiModel faturaBilgiModel);
+    FaturaBilgiModel getLoginFatura(Long musteriId);
 
 }
