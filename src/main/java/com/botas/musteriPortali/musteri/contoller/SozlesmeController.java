@@ -33,9 +33,9 @@ public class SozlesmeController {
     }
 
 
-    @PostMapping(value = "/getMusteriyillikSozlesme")
-    public ResponseEntity<Sozlesme> getyillikSozlesme(@RequestBody Sozlesme sozlesme) {
-        return ResponseEntity.ok(sozlesmeService.getyillikSozlesme(sozlesme.getYil(), sozlesme.getMusteri().getId()));
+    @GetMapping(value = "/getMusteriyillikSozlesme/{yil}/{musteriId}")
+    public ResponseEntity<Sozlesme> getyillikSozlesme(@PathVariable int yil, @PathVariable Long musteriId) {
+        return ResponseEntity.ok(sozlesmeService.getyillikSozlesme(yil, musteriId));
     }
 
 

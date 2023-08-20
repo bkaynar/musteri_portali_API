@@ -8,5 +8,8 @@ import java.util.List;
 
 public interface SozlesmeRepository extends JpaRepository<Sozlesme,Long> {
     Sozlesme findByYilAndMusteriId(int yil,Long musteriId);
+    List<Sozlesme> findByMusteriId(Long musteriId);
+
+
 
 }
