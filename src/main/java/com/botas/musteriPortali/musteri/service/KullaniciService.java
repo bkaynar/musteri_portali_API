@@ -15,4 +15,7 @@ public interface KullaniciService {
 
     void deleteById(Long id);
     List<Kullanici> getAll();
+
+    Kullanici update(Kullanici kullanici);
+
 }

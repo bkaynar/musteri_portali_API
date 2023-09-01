@@ -1,6 +1,7 @@
 package com.botas.musteriPortali.musteri.contoller;
 
 import com.botas.musteriPortali.musteri.entity.Kullanici;
+import com.botas.musteriPortali.musteri.entity.Musteri;
 import com.botas.musteriPortali.musteri.model.KullaniciGirisModel;
 import com.botas.musteriPortali.musteri.service.KullaniciService;
 import org.springframework.http.ResponseEntity;
@@ -26,7 +27,10 @@ public class KullaniciController {
     public ResponseEntity<Kullanici> ekle(@RequestBody Kullanici kullanici) {
         return ResponseEntity.ok(kullaniciService.save(kullanici));
     }
-
+    @PutMapping(value = "/gunle")
+    public ResponseEntity<Kullanici> gunle (@RequestBody Kullanici kullanici){
+        return ResponseEntity.ok(kullaniciService.update(kullanici));
+    }
     @GetMapping(value = "/getById/{id}")
     public ResponseEntity<Kullanici> getById(@PathVariable Long id) {
         return ResponseEntity.ok(kullaniciService.getById(id));

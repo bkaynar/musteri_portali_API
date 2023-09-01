@@ -52,4 +52,17 @@ public class KullaniciServiceImpl implements KullaniciService {
     public List<Kullanici> getAll() {
         return kullaniciRepository.findAll();
     }
+
+    @Override
+    public Kullanici update(Kullanici kullanici) {
+        if (kullanici.getId()!=null){
+            var kullaniciDb = kullaniciRepository.findById(kullanici.getId());
+            if (kullaniciDb.isPresent()){
+                Kullanici kullaniciEnt=kullaniciDb.get();
+                if (kullanici.getKullaniciSifre() != null)
+                    kullaniciEnt.setKullaniciSifre(kullanici.getKullaniciSifre());
+                return kullaniciRepository.save(kullaniciEnt);
+            }else return null;
+        }else return null;
+    }
 }

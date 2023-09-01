@@ -36,4 +36,9 @@ public class STuketiciImpl implements STuketiciService {
     public List<STuketici> getAll() {
         return sTuketiciRepository.findAll();
     }
+
+    @Override
+    public List<STuketici> getByMusteriId(Long musteriId) {
+        return sTuketiciRepository.findByMusteriId(musteriId);
+    }
 }

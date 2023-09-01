@@ -37,8 +37,9 @@ public class SozlesmeController {
     public ResponseEntity<Sozlesme> getyillikSozlesme(@PathVariable int yil, @PathVariable Long musteriId) {
         return ResponseEntity.ok(sozlesmeService.getyillikSozlesme(yil, musteriId));
     }
-
-
-
-
+    @GetMapping(value = "/getMusteriSozlesmeler/{musteriId}")
+    public ResponseEntity<List<Sozlesme>>getMusteriSozlesmeler(@PathVariable Long musteriId){
+        List<Sozlesme> sozlesmeler=sozlesmeService.getMusteriSozlesmeler(musteriId);
+        return ResponseEntity.ok(sozlesmeler);
+    }
 }

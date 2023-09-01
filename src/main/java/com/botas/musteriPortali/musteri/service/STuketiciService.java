@@ -1,5 +1,6 @@
 package com.botas.musteriPortali.musteri.service;
 
+import com.botas.musteriPortali.musteri.entity.GerceklesenTMB;
 import com.botas.musteriPortali.musteri.entity.STuketici;
 
 import java.util.List;
@@ -12,4 +13,6 @@ public interface STuketiciService{
     void deleteById(Long id);
 
     List<STuketici> getAll();
+
+    List<STuketici> getByMusteriId(Long musteriId);
 }

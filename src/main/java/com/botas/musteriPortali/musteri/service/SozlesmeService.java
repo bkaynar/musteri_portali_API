@@ -15,5 +15,5 @@ public interface SozlesmeService {
     List<Sozlesme> getAll();
     Sozlesme getyillikSozlesme(int yil,Long musteriId);
 
-
+List<Sozlesme> getMusteriSozlesmeler(Long musteriId);
 }

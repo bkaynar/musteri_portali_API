@@ -44,4 +44,9 @@ public class SozlesmeServiceImpl implements SozlesmeService {
     public Sozlesme getyillikSozlesme(int yil, Long musteriID) {
         return sozlesmeRepository.findByYilAndMusteriId(yil,musteriID);
     }
+
+    @Override
+    public List<Sozlesme> getMusteriSozlesmeler(Long musteriId) {
+        return sozlesmeRepository.findByMusteriId(musteriId);
+    }
 }

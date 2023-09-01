@@ -1,5 +1,6 @@
 package com.botas.musteriPortali.musteri.contoller;
 
+import com.botas.musteriPortali.musteri.entity.GerceklesenTMB;
 import com.botas.musteriPortali.musteri.entity.STuketici;
 import com.botas.musteriPortali.musteri.entity.Tahis;
 import com.botas.musteriPortali.musteri.service.STuketiciService;
@@ -32,6 +33,9 @@ public class STuketiciController {
     public ResponseEntity<List<STuketici>> getAll() {
         return ResponseEntity.ok(tuketiciService.getAll());
     }
-
+    @GetMapping(value = "/getByMusteriId/{musteriId}")
+    public ResponseEntity<List<STuketici>> getByMusteriId(@PathVariable Long musteriId) {
+        return ResponseEntity.ok(tuketiciService.getByMusteriId(musteriId));
+    }
 }
 
